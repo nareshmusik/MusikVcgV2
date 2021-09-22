@@ -812,7 +812,7 @@ async def ytplay(_, message: Message):
             f"<i> {user.first_name} Assistant Bot terkena banned dari Grup ini, Minta admin untuk unbanned assistant bot lalu tambahkan {user.first_name} Assistant Bot secara manual</i>"
         )
         return
-    await lel.edit("🔍 <b>Mencari lagu</b>")
+    await lel.edit("🔍 <b>Mencari desahan</b>")
     message.from_user.id
     message.from_user.first_name
 
@@ -820,7 +820,7 @@ async def ytplay(_, message: Message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    await lel.edit("🎶 **Memproses lagu yang diminta**")
+    await lel.edit("🎶 **Memproses DESAHAN yang diminta bapalu**")
     ydl_opts = {"format": "bestaudio/best"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -877,7 +877,7 @@ async def ytplay(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption=f"🎵 **Lagu yang Anda minta dalam antrian diposisi** {position}!",
+            caption=f"🎵 **Desahan yang bapa lu minta dalam antrian diposisi** {position}!",
             reply_markup=keyboard,
         )
         os.remove("final.png")
@@ -899,7 +899,7 @@ async def ytplay(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="🔊 **Sedang memutar lagu request-an dari** {} ".format(
+            caption="🔊 **Sedang mmemutar desahan request-an dari** {} ".format(
                 message.from_user.mention()
             ),
         )
@@ -912,7 +912,7 @@ async def jiosaavn(client: Client, message_: Message):
     global que
     if message_.chat.id in DISABLED_GROUPS:
         return
-    lel = await message_.reply("🔄 **Mohon tunggu sebentar**")
+    lel = await message_.reply("🔄 **SABAR YA ANAK KONTOL**")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
@@ -1046,7 +1046,7 @@ async def jiosaavn(client: Client, message_: Message):
         chat_id=message_.chat.id,
         reply_markup=keyboard,
         photo="final.png",
-        caption=f"🎵 **Sedang memutar lagu** {sname} Via Jiosaavn",
+        caption=f"🎵 **DESAHAN NYA LAGI GUA PUTER** {sname} Via Jiosaavn",
     )
     os.remove("final.png")
 
@@ -1070,7 +1070,7 @@ async def lol_cb(b, cb):
             "Anda bukan orang yang meminta untuk memutar lagu !", show_alert=True
         )
         return
-    await cb.message.edit("Tunggu sebentar ya anak setan 👹")
+    await cb.message.edit(" tunggu sebentar lagi naresh cari, KONTOL 😡")
     x = int(x)
     try:
         useer_name = cb.message.reply_to_message.from_user.first_name
@@ -1134,7 +1134,7 @@ async def lol_cb(b, cb):
         await b.send_photo(
             chat_id,
             photo="final.png",
-            caption=f"🎵 <b>Lagu yang Anda {r_by.mention} minta dalam antrian diposisi {position}! </b>",
+            caption=f"🎵 <b>DESAH YANG  {r_by.mention} LU MINTA ADA DI {position}! </b>",
             reply_markup=keyboard,
         )
         os.remove("final.png")
@@ -1157,6 +1157,6 @@ async def lol_cb(b, cb):
             chat_id,
             photo="final.png",
             reply_markup=keyboard,
-            caption=f"🎵 <b>Sedang memutar lagu request-an dari {r_by.mention} </b>",
+            caption=f"🎵 <b>Sedang memutar desahan request-an dari anak kontol {r_by.mention} </b>",
         )
         os.remove("final.png")
